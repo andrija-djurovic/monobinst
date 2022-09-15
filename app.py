@@ -41,7 +41,7 @@ if "db" not in st.session_state:
                             and setup binning algorithms in sidebar section."
     
 #sidebar
-image = Image.open(os.getcwd() + "\\settings_2.png")
+image = Image.open(os.getcwd() + "\\settings.png")
 ic1, ic2, ic3, ic4, ic5 = st.sidebar.columns(5)
 ic3.image(image, use_column_width = False)
 #data manager
