@@ -14,6 +14,11 @@ exec(open("styles.py").read())
 #import custom functions
 exec(open("_helpers.py").read())
 
+# author (linkedin) & github code
+st.markdown('''###### Author: [Andrija Djurovic](https://www.linkedin.com/in/andrija-djurovic/) \
+             [🕵](https://github.com/andrija-djurovic/monobinst/)''',
+            unsafe_allow_html = True)
+
 #title
 st.title("Streamlit UI for [monobinpy](https://pypi.org/project/monobinpy/) package")
 
