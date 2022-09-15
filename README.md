@@ -1,7 +1,7 @@
 # monobinst
 
 The purpose of this application is to create Streamlit UI for [monobinpy](https://pypi.org/project/monobinpy) package.
-For time being application can be run locally, and the main requirements are given below:
+For time being application can be run only locally, and the main requirements are given below:
 ```cmd
 streamlit
 pandas
@@ -14,22 +14,26 @@ st_aggrid
 PIL
 
 ``` 
-User can set up environment in two ways:
 
-1.   using git clone. 
-2.   downloading repository zip file.
+Using ```git clone``` user can easily set up the application environment following the next 3 steps:
 
-For the first option user should complete the following steps:
-
-*   Step 1:
+*   Step 1 - open cmd and set working directory:
 ```cmd
-git clone 
+cd "your application directory" 
 
 ```
-*   Step 2:
+*   Step 2 - clone the repository using ```git clone```:
+```cmd
+git clone https://github.com/andrija-djurovic/monobinst
 
-To run streamlit in usual way (after coping repository) just use:
+```
+*   Step 3 - start app using ```streamlit```:
 ```cmd
 streamlit run app.py
 
 ```
+
+Another way to set up the application enviornment is to download repository zip file, then to unzipp it in selected folder
+and finally to run ```streamlit``` from the same folder (like the 3rd step from above). 
+
+Happy Streamlit-ing :)
