@@ -1,0 +1,9 @@
+streamlit
+pandas
+monobinpy
+pathlib
+base64
+os
+inspect
+st_aggrid
+PIL
