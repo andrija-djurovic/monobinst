@@ -29,7 +29,7 @@ git clone https://github.com/andrija-djurovic/monobinst
 ```
 *   Step 3 - move working directory for one folder up and start app using ```streamlit```:
 ```cmd
-cd ".monobinst"
+cd "./monobinst"
 streamlit run app.py
 
 ```
