@@ -27,7 +27,12 @@ cd "your application directory"
 git clone https://github.com/andrija-djurovic/monobinst
 
 ```
-*   Step 3 - start app using ```streamlit```:
+*   Step 3 - move working directory one folder up:
+```cmd
+cd ".\monobinst"
+
+```
+*   Step 4 - start app using ```streamlit```:
 ```cmd
 streamlit run app.py
 
@@ -36,4 +41,4 @@ streamlit run app.py
 Another way to set up the application enviornment is to download repository zip file, then to unzipp it in selected folder
 and finally to run ```streamlit``` from the same folder (like the 3rd step from above). 
 
-Happy Streamlit-ing :)
+Happy Streamlit-ing :smile:
