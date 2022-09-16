@@ -39,7 +39,7 @@ streamlit run app.py
 ```
 
 Another way to set up the application enviornment is to download repository zip file, then to unzipp it in selected folder
-and finally to run ```streamlit``` from the same folder (like the 3rd step from above). 
+and finally to run ```streamlit``` from the same folder (like the 4th step from above). 
 
 Here are few print screens after successful start of the application.
 
