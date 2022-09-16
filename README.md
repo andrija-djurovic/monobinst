@@ -41,4 +41,16 @@ streamlit run app.py
 Another way to set up the application enviornment is to download repository zip file, then to unzipp it in selected folder
 and finally to run ```streamlit``` from the same folder (like the 3rd step from above). 
 
+Here are few print screens after successful start of the application.
+
+*   Starting app window
+![](./img/img_0.png)<!-- -->
+
+*   Import of dummy data
+![](./img/img_1.png)<!-- -->
+
+*   Running one of the binning algorithms
+![](./img/img_2.png)<!-- -->
+
+
 Happy Streamlit-ing :smile:
