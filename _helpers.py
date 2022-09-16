@@ -156,13 +156,6 @@ ndr_sts_bin_ui = inspect.cleandoc("""
 """)
 
 # binning
-args = ["[arg1, arg2, arg3, arg4, arg5, arg6]",
-        "[arg1, arg2, arg3, arg4, arg5]",
-        "[arg1, arg2, arg3, arg4, arg5, arg6]",
-        "[arg1, arg2, arg3, arg4, arg5, arg6, arg7]",
-        "[arg1, arg2, arg3, arg4, arg5, arg6, arg7]",
-        "[arg1, arg2, arg3, arg4, arg5, arg6, arg7]"]
-args_dict = dict(zip(ba, args))
 monobin_fun = [
     "mb.pct_bin(x = x, y = y, sc = arg1_s, sc_method = arg2,\
               g = arg3,y_type = arg4,\
