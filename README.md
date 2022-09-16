@@ -43,7 +43,7 @@ and finally to run ```streamlit``` from the same folder (like the 4th step from 
 
 Here are few print screens after successful start of the application.
 
-*   Starting app window
+*   Starting app window with expanded INFO details
 ![](./img/img_0.png)<!-- -->
 
 *   Import of dummy data
