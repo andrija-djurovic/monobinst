@@ -1,5 +1,5 @@
 # dummy upload
-@st.cache
+@st.cache(allow_output_mutation = True)
 def dummy_upload():
     if "file_path" in st.session_state:
         st.session_state.file_path = st.session_state.file_path + 1
@@ -15,7 +15,7 @@ def dummy_upload():
                             and setup binning algorithms in sidebar section."
 
 # data upload
-@st.cache
+@st.cache(allow_output_mutation = True)
 def data_upload():
     db = pd.read_csv(filepath_or_buffer = upl_data)
     st.session_state.db = db

@@ -18,7 +18,7 @@ exec(open("_helpers.py").read())
 st.markdown('''###### Author: [Andrija Djurovic](https://www.linkedin.com/in/andrija-djurovic/) \
              [🕵](https://github.com/andrija-djurovic/monobinst/)''',
             unsafe_allow_html = True)
-
+    
 #title
 st.title("Streamlit UI for [monobinpy](https://pypi.org/project/monobinpy/) package")
 
@@ -98,19 +98,20 @@ if st.session_state.db is not None:
                                    options = rf_opts,
                                    default = None)
     st.sidebar.markdown(":runner: **MONOTONIC BINNING**")
-    inputs = st.sidebar.container()
-    bin_algo = inputs.selectbox(label = "Select binning algorithm",
-                                options = ba)
+    bin_algo = st.sidebar.selectbox(label = "Select binning algorithm",
+                                    options = ba)
+    
+    inputs = st.sidebar.form(key = "algo_inputs") 
     if bin_algo in ["sts_bin", "ndr_bin"]:
         bin_algo_select = "ndr_sts_bin" 
     else:
         bin_algo_select = bin_algo
     bin_ui = bin_algo_select + "_ui"  
-    exec(eval(bin_ui))
-    #run binning algo
-    st.sidebar.button(label = "👊 Run binning algorithm",
-                      on_click = binning,
-                      args = [arg1])
+    exec(eval(bin_ui))     
+    run_bin = inputs.form_submit_button(label = "👊 Run binning algorithm")
+    if run_bin:
+        binning(sc = arg1)
+                          
     mb_container = mono_bin.empty()
     if st.session_state.success:
         with mb_container.container():
