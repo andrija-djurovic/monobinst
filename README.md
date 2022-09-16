@@ -15,7 +15,7 @@ PIL
 
 ``` 
 
-Using ```git clone``` user can easily set up the application environment following the next 3 steps:
+Using ```git clone``` user can easily set up the application environment following the next 4 steps:
 
 *   Step 1 - open cmd and set working directory:
 ```cmd
