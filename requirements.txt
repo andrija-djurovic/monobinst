@@ -5,5 +5,5 @@ pathlib
 base64
 os
 inspect
-st_aggrid
+AgGrid
 PIL

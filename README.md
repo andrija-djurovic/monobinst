@@ -4,13 +4,13 @@ The purpose of this application is to create Streamlit UI for [monobinpy](https:
 For time being application can be run only locally, and the main requirements are given below:
 ```cmd
 streamlit
-pandas
+AgGrid
 monobinpy
+pandas
 pathlib
 base64
 os
 inspect
-st_aggrid
 PIL
 
 ``` 
@@ -27,9 +27,8 @@ cd "your application directory"
 git clone https://github.com/andrija-djurovic/monobinst
 
 ```
-*   Step 3 - move working directory for one folder up and start app using ```streamlit```:
+*   Step 3 - start app using ```streamlit```:
 ```cmd
-cd "./monobinst"
 streamlit run app.py
 
 ```
@@ -37,4 +36,4 @@ streamlit run app.py
 Another way to set up the application enviornment is to download repository zip file, then to unzipp it in selected folder
 and finally to run ```streamlit``` from the same folder (like the 3rd step from above). 
 
-Happy Streamlit-ing 😄
+Happy Streamlit-ing :)
