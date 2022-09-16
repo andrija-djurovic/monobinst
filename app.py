@@ -77,7 +77,12 @@ if st.session_state.db is not None:
             dm.markdown(f"<b><p style='color:#92d400;'>{udn}</p></b>", 
                         unsafe_allow_html = True)
     tbl = df_info(db = st.session_state.db)
-    dm.table(tbl)
+    dm.write("Data summary")
+    with dm:
+        AgGrid(tbl, height = 150, fit_columns_on_grid_load = True)
+    dm.write("Data sample")
+    with dm:
+        AgGrid(st.session_state.db.head(), fit_columns_on_grid_load = True)
     #monotonic binning
     mono_bin = st.expander(label = "MONOTONIC BINNING - target and risk factors selection", 
                            expanded = True)
@@ -127,7 +132,7 @@ if st.session_state.db is not None:
                                    file_name = "db_recoded.csv",
                                    mime = "text/csv")
            AgGrid(st.session_state.res_sum,
-                  editable = True,
+                  editable = False,
                   height = 400)
     else:
         mono_bin.warning(st.session_state.msg)
