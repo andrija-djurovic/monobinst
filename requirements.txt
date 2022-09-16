@@ -1,9 +1,9 @@
 streamlit
-pandas
+st_aggrid
 monobinpy
+pandas
 pathlib
 base64
 os
 inspect
-AgGrid
 PIL
