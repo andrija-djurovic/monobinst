@@ -4,7 +4,7 @@ The purpose of this application is to create Streamlit UI for [monobinpy](https:
 For time being application can be run only locally, and the main requirements are given below:
 ```cmd
 streamlit
-AgGrid
+st_aggrid
 monobinpy
 pandas
 pathlib
