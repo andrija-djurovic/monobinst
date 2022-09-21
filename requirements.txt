@@ -1,5 +1,5 @@
 streamlit
-st_aggrid
+streamlit-aggrid
 monobinpy
 pandas
 pathlib
