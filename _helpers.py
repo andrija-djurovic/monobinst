@@ -14,7 +14,6 @@ def dummy_upload():
                             and setup binning algorithms in sidebar section."
 
 # data upload
-@st.cache(max_entries = 1)
 def data_upload():
     db = pd.read_csv(filepath_or_buffer = upl_data)
     st.session_state.db = db
