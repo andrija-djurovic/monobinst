@@ -101,7 +101,7 @@ if st.session_state.db is not None:
         rf = container.multiselect(label = "Select risk factors",
                                    options = rf_opts,
                                    default = rf_opts,
-                                   on_change = on_change = upload_norun)
+                                   on_change = upload_norun)
     else:
         rf = container.multiselect(label = "Select risk factors",
                                    options = rf_opts,
@@ -109,7 +109,7 @@ if st.session_state.db is not None:
     st.sidebar.markdown(":runner: **MONOTONIC BINNING**")
     bin_algo = st.sidebar.selectbox(label = "Select binning algorithm",
                                     options = ba,
-                                    on_change = on_change = upload_norun)
+                                    on_change = upload_norun)
     
     inputs = st.sidebar.form(key = "algo_inputs") 
     if bin_algo in ["sts_bin", "ndr_bin"]:
