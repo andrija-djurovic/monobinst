@@ -1,7 +1,7 @@
 # monobinst
 
 The purpose of this application is to create Streamlit UI for [monobinpy](https://pypi.org/project/monobinpy) package.
-For time being application can be run only locally, and the main requirements are given below:
+Application can be accessed [here](https://andrija-djurovic-monobinst-app-z3rxdo.streamlitapp.com/), and the main requirements are given below:
 ```cmd
 streamlit
 streamlit-aggrid
