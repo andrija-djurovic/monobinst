@@ -2,8 +2,3 @@ streamlit
 streamlit-aggrid
 monobinpy
 pandas
-pathlib
-base64
-os
-inspect
-PIL
