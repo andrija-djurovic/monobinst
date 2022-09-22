@@ -44,6 +44,7 @@ if "db" not in st.session_state:
     st.session_state.clear_mb = False
     st.session_state.msg = "Please, select target, risk factors \
                             and setup binning algorithms in sidebar section."
+    st.session_state.run = False
     
 #sidebar
 image = Image.open(os.getcwd() + "/settings.png")
@@ -53,13 +54,14 @@ ic3.image(image, use_column_width = False)
 st.sidebar.markdown(":house_buildings: **DATA MANAGER**")
 upl_data = st.sidebar.file_uploader(key = f"{st.session_state.file_path}",
                                     label = "Import .csv file", 
-                                    type = {"csv"})
+                                    type = {"csv"},
+                                    on_change = upload_run)
 #dummy upload
 dummy_data = st.sidebar.button(label = "👊 Import dummy data",
                                on_click = dummy_upload)
 
 #data upload
-if upl_data is not None:
+if upl_data is not None and st.session_state.run:
     data_upload()
 st.sidebar.markdown("---")
 
@@ -93,18 +95,21 @@ if st.session_state.db is not None:
     rf_opts = [x for x in st.session_state.trg_opts if x != target]
     container = c2.container()
     rf_sel_all = c2.checkbox(label = "Select all risk factors",
-                             value = False)
+                             value = False,
+                             on_change = upload_norun)
     if (rf_sel_all):
         rf = container.multiselect(label = "Select risk factors",
                                    options = rf_opts,
-                                   default = rf_opts)
+                                   default = rf_opts,
+                                   on_change = on_change = upload_norun)
     else:
         rf = container.multiselect(label = "Select risk factors",
                                    options = rf_opts,
                                    default = None)
     st.sidebar.markdown(":runner: **MONOTONIC BINNING**")
     bin_algo = st.sidebar.selectbox(label = "Select binning algorithm",
-                                    options = ba)
+                                    options = ba,
+                                    on_change = on_change = upload_norun)
     
     inputs = st.sidebar.form(key = "algo_inputs") 
     if bin_algo in ["sts_bin", "ndr_bin"]:
