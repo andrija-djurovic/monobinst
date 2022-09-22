@@ -25,6 +25,12 @@ def data_upload():
     st.session_state.msg = "Please, select target, risk factors \
                             and setup binning algorithms in sidebar section."
 
+# upload helpers
+def upload_run():
+    st.session_state.run = True
+def upload_norun():
+    st.session_state.run = False
+
 # print data frame info
 @st.cache
 def df_info(db):
