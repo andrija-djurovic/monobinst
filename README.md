@@ -7,12 +7,6 @@ streamlit
 streamlit-aggrid
 monobinpy
 pandas
-pathlib
-base64
-os
-inspect
-PIL
-
 ``` 
 
 Using ```git clone``` user can easily set up the application environment following the next 4 steps:
