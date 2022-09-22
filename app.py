@@ -24,7 +24,7 @@ st.title("Streamlit UI for [monobinpy](https://pypi.org/project/monobinpy/) pack
 
 #background picture
 bg_url = os.getcwd() + "\\background.png"
-set_bg(main_bg = bg_url)
+#set_bg(main_bg = bg_url)
 
 #intro
 st.markdown(Path("intro.md").read_text(), 
