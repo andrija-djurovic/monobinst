@@ -1,5 +1,4 @@
 # dummy upload
-@st.cache(allow_output_mutation = True)
 def dummy_upload():
     if "file_path" in st.session_state:
         st.session_state.file_path = st.session_state.file_path + 1
